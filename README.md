@@ -75,30 +75,6 @@ Source/
 
 ---
 
-## 🚀 시작하기
-
-### 요구 사항
-
-* **Unreal Engine 5.x**
-* **Visual Studio** (Desktop development with C++ / MSVC v143 / Windows 10/11 SDK)
-
-### 열기/빌드
-
-1. `.sln` 또는 프로젝트 파일이 없거나 오래되었다면
-
-   * `.uproject` 우클릭 → **Generate Visual Studio project files**
-   * 또는 엔진의 `GenerateProjectFiles.bat`를 `-project=<uproject 경로>`와 함께 실행
-2. 생성된 `.sln`을 열어 빌드하거나, 에디터에서 프로젝트를 열고 **Play**.
-
-### 레벨 셋업
-
-1. **ASpawnActor**를 레벨에 배치
-2. Details 패널에서 **SpawningBox**의 **Box Extent**를 원하는 범위로 조절
-3. **CoinClass**에 `ACoin` 기반 블루프린트(예: `BP_Coin`) 지정
-4. 재생: **2초 후 첫 스폰**, 이후 **4초 간격**으로 스폰, **최대 10개**까지 생성
-
----
-
 ## ⏱️ 타이머 커스터마이즈
 
 현재 값은 `ASpawnActor::BeginPlay()`에서 설정되어 있습니다.
