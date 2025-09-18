@@ -27,8 +27,13 @@ public:
 	void SpawnItem(TSubclassOf<AActor> ItemClass);
 	UPROPERTY(EditAnywhere, Category = "Spawning")
 	TSubclassOf<AActor> CoinClass;
+	UPROPERTY(EditAnywhere, Category = "Spawning")
 	FTimerHandle SpawnTimerHandle;
+	UPROPERTY(EditAnywhere, Category = "Spawning")
+	int32 MaxSpawnCount = 10;
+	int32 CurrentSpawnCount = 0;
 	void SpawnCoin();
+
 
 protected:
 	// Called when the game starts or when spawned

@@ -60,9 +60,16 @@ void ASpawnActor::BeginPlay()
 void ASpawnActor::SpawnCoin()
 {
 	// 원하는 코인 클래스를 Blueprint에서 설정해둘 수 있게 UPROPERTY로 노출
+	if (CurrentSpawnCount >= MaxSpawnCount)
+	{
+		GetWorld()->GetTimerManager().ClearTimer(SpawnTimerHandle);
+		return;
+	}
+
 	if (CoinClass)
 	{
 		SpawnItem(CoinClass);
+		CurrentSpawnCount++;
 	}
 }
 
